@@ -16,6 +16,10 @@ see [AndroidManifest.xml](droidsensor/src/main/AndroidManifest.xml)
 
 * post every nth battery level: e.g. 5  : post only every 5th battery level event
 
+* Require Home Wifi: post only if on Home Wifi
+
+* set Home Wifi from current: click to set to current
+
 * WakeLock & Wifi Lock: should be checked to prevent the service from being stopped
 
 ## Topics
