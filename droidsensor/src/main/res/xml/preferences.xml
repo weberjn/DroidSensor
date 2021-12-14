@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <EditTextPreference android:title="MQTT URL"
+        android:inputType="textUri"
+        android:key="mqtturl" />
+
+    <CheckBoxPreference android:title="Authorization"
+        android:defaultValue="false"
+        android:key="auth" />
+
+    <EditTextPreference android:title="User"
+        android:dependency="auth"
+        android:inputType="text"
+        android:key="username" />
+
+    <EditTextPreference android:title="Password"
+        android:dependency="auth"
+        android:inputType="textPassword"
+        android:key="password" />
+
+    <EditTextPreference android:title="topic prefix"
+        android:inputType="text"
+        android:key="topicprefix" />
+
+    <EditTextPreference android:title="post every nth battery level"
+        android:inputType="number"
+        android:key="nthbatterylevel" />
+
+    <CheckBoxPreference android:title="Require Home Wifi"
+        android:defaultValue="false"
+        android:key="requirehomewifi" />
+
+    <EditTextPreference android:title="Home Wifi"
+        android:key="homewifi"
+        android:inputType="text"
+         />
+
+    <Preference android:title="set Home Wifi from current"
+        android:key="sethomewifi"
+        android:icon="@android:drawable/btn_dialog"
+        />
+
+    <CheckBoxPreference android:title="WakeLock &amp; Wifi Lock"
+        android:defaultValue="false"
+        android:key="wakeLock" />
+
+    <Preference
+        android:key="pref_app_info"
+        android:persistent="false"
+        android:selectable="false"
+        android:title="@string/app_info" />
+
+
+</PreferenceScreen>
+
