@@ -4,6 +4,8 @@ Android battery, power and wifi sensor
 
 This is an Android Foreground service that posts battery, power, wifi and telephony events of the device to an MQTT server.
 
+The service should start at boot.
+
 ## Permissions
 
 Lots needed.
@@ -12,11 +14,11 @@ see [AndroidManifest.xml](droidsensor/src/main/AndroidManifest.xml)
 
 ## Settings
 
-* MQTT URL: e.g. tcp://hostname or ssl://hostname
+* MQTT Server URL: e.g. tcp://hostname or ssl://hostname
 
 * topic prefix: e.g. droids/xperia
 
-* post every nth battery level: e.g. 5  : post only every 5th battery level event
+* post every nth battery level: e.g. 10  : post only every 10th battery level event
 
 * Require Home Wifi: post only if on Home Wifi
 
