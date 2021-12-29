@@ -15,6 +15,7 @@ import android.os.Build;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
@@ -45,7 +46,10 @@ public class ForegroundService extends Service {
         filter.addAction(Intent.ACTION_BATTERY_CHANGED);
         filter.addAction(Intent.ACTION_POWER_CONNECTED);
         filter.addAction(Intent.ACTION_POWER_DISCONNECTED);
+
         filter.addAction(WifiManager.NETWORK_STATE_CHANGED_ACTION);
+
+        filter.addAction(TelephonyManager.ACTION_PHONE_STATE_CHANGED);
 
         filter.addAction("de.jwi.droidsensor.ServiceEvent");
 

@@ -11,6 +11,7 @@ import android.net.wifi.WifiManager;
 import android.os.BatteryManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -116,6 +117,38 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
                 ssid = currentWifi.getSSID();
                 Log.d(TAG, "currentWifi: " + ssid);
                 Log.d(TAG, "homeWifi: " + homewifi);
+
+                break;
+
+            case TelephonyManager.ACTION_PHONE_STATE_CHANGED:
+
+                // incoming call: ringing -> idle
+                // outgoing call: offhook -> idle
+
+                String state = intent.getExtras().getString(TelephonyManager.EXTRA_STATE);
+                String number = intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
+
+                if (number == null)
+                {
+                    return;
+                }
+
+                topic = "telephony";
+
+                if (state.equals(TelephonyManager.EXTRA_STATE_IDLE))
+                {
+                    payload = String.format("idle/%s", number);
+                }
+                else if (state.equals(TelephonyManager.EXTRA_STATE_RINGING))
+                {
+                    payload = String.format("ringing/%s", number);
+                }
+                else if (state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK))
+                {
+                    payload = String.format("offhook/%s", number);
+                }
+
+                Log.d(TAG, topic + "/" + payload);
 
                 break;
         }
