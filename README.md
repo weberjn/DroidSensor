@@ -2,9 +2,11 @@
 
 Android battery, power and wifi sensor
 
-This is a Android Foreground service that posts battery, power and wifi events of the device to an MQTT server.
+This is an Android Foreground service that posts battery, power, wifi and telephony events of the device to an MQTT server.
 
 ## Permissions
+
+Lots needed.
 
 see [AndroidManifest.xml](droidsensor/src/main/AndroidManifest.xml)
 
@@ -22,21 +24,22 @@ see [AndroidManifest.xml](droidsensor/src/main/AndroidManifest.xml)
 
 * WakeLock & Wifi Lock: should be checked to prevent the service from being stopped
 
-## Topics
+## Topics Payloads
 
-* battery/state
-* battery/level
-* power
-* wifi
+* battery/state {low,okay}
+* battery/level $level/$scale
+* power {connected,disconnected}
+* wifi $networkInfoState
+* telephony {idle,ringing,offhook}/$number
 
 see [MyBroadcastReceiver.java](droidsensor/src/main/java/de/jwi/droidsensor/MyBroadcastReceiver.java)
 
 ## Test
 
-    mosquitto_sub -F "%I %t %p" -t 'droidsensor/xperia/#'
+    mosquitto_sub -F "%I %t %p" -t 'droids/xperia/#'
 	
 	2021-11-04T23:28:41+0100 droids/xperia/battery/level 16/100
-
+	2021-12-29T20:51:11+0100 droids/xperia/telephony ringing/+49030
 
 
 
