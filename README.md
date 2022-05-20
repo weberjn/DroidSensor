@@ -32,7 +32,7 @@ see [AndroidManifest.xml](droidsensor/src/main/AndroidManifest.xml)
 * battery/level $level/$scale
 * power {connected,disconnected}
 * wifi $networkInfoState
-* telephony {idle,ringing,offhook}/$number
+* telephony/{idle,ringing,offhook} $number
 
 see [MyBroadcastReceiver.java](droidsensor/src/main/java/de/jwi/droidsensor/MyBroadcastReceiver.java)
 
@@ -41,7 +41,7 @@ see [MyBroadcastReceiver.java](droidsensor/src/main/java/de/jwi/droidsensor/MyBr
     mosquitto_sub -F "%I %t %p" -t 'droids/xperia/#'
 	
 	2021-11-04T23:28:41+0100 droids/xperia/battery/level 16/100
-	2021-12-29T20:51:11+0100 droids/xperia/telephony ringing/+49030
+	2021-12-29T20:51:11+0100 droids/xperia/telephony/ringing +49030
 
 
 

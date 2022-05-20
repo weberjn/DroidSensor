@@ -133,20 +133,20 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
                     return;
                 }
 
-                topic = "telephony";
-
                 if (state.equals(TelephonyManager.EXTRA_STATE_IDLE))
                 {
-                    payload = String.format("idle/%s", number);
+                    topic = "telephony/idle";
                 }
                 else if (state.equals(TelephonyManager.EXTRA_STATE_RINGING))
                 {
-                    payload = String.format("ringing/%s", number);
+                    topic = "telephony/ringing";
                 }
                 else if (state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK))
                 {
-                    payload = String.format("offhook/%s", number);
+                    topic = "telephony/offhook";
                 }
+
+                payload = number;
 
                 Log.d(TAG, topic + "/" + payload);
 
