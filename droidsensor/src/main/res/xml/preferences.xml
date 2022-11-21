@@ -27,7 +27,12 @@
         android:inputType="number"
         android:key="nthbatterylevel" />
 
+    <CheckBoxPreference android:title="Require Wifi"
+        android:defaultValue="false"
+        android:key="requirewifi" />
+
     <CheckBoxPreference android:title="Require Home Wifi"
+        android:dependency="requirewifi"
         android:defaultValue="false"
         android:key="requirehomewifi" />
 
@@ -51,6 +56,26 @@
         android:selectable="false"
         android:title="@string/app_info" />
 
+
+    <CheckBoxPreference android:title="Geofence notifications"
+        android:defaultValue="false"
+        android:key="geofenceNotifications" />
+
+    <EditTextPreference android:title="Geofence location"
+        android:key="geofenceLocation"
+        android:enabled="false"
+        android:inputType="text"
+        />
+
+    <EditTextPreference android:title="Geofence radius"
+        android:key="geofenceRadius"
+        android:inputType="number"
+        />
+
+    <Preference android:title="set Geofence from current location"
+        android:key="setgeofenceLocation"
+        android:icon="@android:drawable/btn_dialog"
+        />
 
 </PreferenceScreen>
 

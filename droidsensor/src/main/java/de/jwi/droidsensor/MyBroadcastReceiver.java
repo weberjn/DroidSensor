@@ -27,9 +27,14 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
     private static final String TAG = "MyBroadcastReceiver";
 
     static final String SERVICE_ACTION = "de.jwi.droidsensor.ServiceEvent";
+
+    static final String LOCATION_ACTION = "de.jwi.droidsensor.LocationEvent";
+
     static final String EXTRA_CMD = "cmd";
     static final String EXTRA_START = "start";
     static final String EXTRA_STOP  = "stop";
+
+    static final String EXTRA_LOCATION = "location";
 
 //    String url = "tcp://nico";
 
@@ -55,6 +60,7 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
         String topicprefix = prefs.getString("topicprefix", "");
         int nthbatterylevel = Integer.parseInt(prefs.getString("nthbatterylevel", "1"));
 
+        boolean requirewifi = prefs.getBoolean("requirewifi", false);
         boolean requirehomewifi = prefs.getBoolean("requirehomewifi", false);
         String homewifi = prefs.getString("homewifi", null);
 
@@ -151,22 +157,28 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
                 Log.d(TAG, topic + "/" + payload);
 
                 break;
+
+            case LOCATION_ACTION:
+                topic = "location";
+                payload = intent.getExtras().getString(EXTRA_LOCATION);
+
+                break;
         }
 
 
-        if (requirehomewifi) {
+        if (requirewifi || requirehomewifi ) {
 
-            if (homewifi == null)
-            {
-                return;
+            if (requirehomewifi) {
+                if (homewifi == null) {
+                    return;
+                }
+
+                if (!homewifi.equals(ssid)) {
+                    return;
+                }
             }
 
-            if (!homewifi.equals(ssid))
-            {
-                return;
-            }
-
-            if(!networkInfoDetailedState.equals(NetworkInfo.DetailedState.CONNECTED)) {
+            if(!NetworkInfo.DetailedState.CONNECTED.equals(networkInfoDetailedState)) {
                 return;
             }
         }

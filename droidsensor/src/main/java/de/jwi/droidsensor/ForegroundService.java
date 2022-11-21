@@ -10,14 +10,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.IBinder;
 import android.os.PowerManager;
 import android.preference.PreferenceManager;
+import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 
 public class ForegroundService extends Service {
@@ -29,6 +34,9 @@ public class ForegroundService extends Service {
     private BroadcastReceiver br;
     private PowerManager.WakeLock wakeLock;
     private WifiManager.WifiLock wifiLock;
+    private Notification notification;
+
+    private LocationListener locationListener;
 
     @Override
     public void onCreate() {
@@ -51,9 +59,23 @@ public class ForegroundService extends Service {
 
         filter.addAction(TelephonyManager.ACTION_PHONE_STATE_CHANGED);
 
-        filter.addAction("de.jwi.droidsensor.ServiceEvent");
+        filter.addAction(MyBroadcastReceiver.SERVICE_ACTION);
+        filter.addAction(MyBroadcastReceiver.LOCATION_ACTION);
 
         this.registerReceiver(br, filter);
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+            Context context = getApplicationContext();
+
+            Intent intent = new Intent();
+            String packageName = context.getPackageName();
+            PowerManager pm = (PowerManager) context.getSystemService(POWER_SERVICE);
+            if (!pm.isIgnoringBatteryOptimizations(packageName)) {
+                intent.setAction(Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);
+                //context.startActivity(intent);
+            }
+        }
     }
 
     private void createNotificationChannel() {
@@ -79,17 +101,25 @@ public class ForegroundService extends Service {
         super.onDestroy();
         Log.d(TAG, "onDestroy");
 
-        if (wakeLock != null)
-        {
+        if (wakeLock != null) {
             Log.d(TAG, "release Power WakeLock");
             wakeLock.release();
         }
-        if (wifiLock != null)
-        {
+        if (wifiLock != null) {
             Log.d(TAG, "release Wifi WakeLock");
             wifiLock.release();
         }
         this.unregisterReceiver(br);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean isGeofenceNotifications = prefs.getBoolean("geofenceNotifications", false);
+
+        if (isGeofenceNotifications) {
+
+            LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+            locationManager.removeUpdates(locationListener);
+
+        }
     }
 
     @Override
@@ -116,7 +146,6 @@ public class ForegroundService extends Service {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isWakeLock = prefs.getBoolean("wakeLock", false);
 
-
         if (isWakeLock)
         {
             Log.d(TAG, "Acquiring Power WakeLock");
@@ -132,6 +161,64 @@ public class ForegroundService extends Service {
             wifiLock.acquire();
         }
 
+        boolean isGeofenceNotifications = prefs.getBoolean("geofenceNotifications", false);
+
+        Location gpsLocation = null;
+        Location netLocation = null;
+        Location location = null;
+
+       // isGeofenceNotifications = false;
+
+        if (isGeofenceNotifications) {
+
+            String geofenceLocation = prefs.getString("geofenceLocation", null);
+
+            int geofenceRadius = Integer.parseInt(prefs.getString("geofenceRadius", "0"));
+
+
+            if (geofenceLocation != null)
+            {
+                LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+
+                locationListener = new LocationListener() {
+                    @Override
+                    public void onLocationChanged(@NonNull Location location) {
+
+                        String[] s = geofenceLocation.split(",");
+
+                        double latitude = Location.convert(s[0]);
+                        double longitude = Location.convert(s[1]);
+
+                        Location fence = new Location((String)null);
+
+                        fence.setLatitude(latitude);
+                        fence.setLongitude(longitude);
+
+                        float distance = fence.distanceTo(location);
+                        //distance > geofenceRadius
+                        if (true) {
+
+                            Intent intent = new Intent(MyBroadcastReceiver.LOCATION_ACTION);
+
+                            String ls = String.format("%s,%s", Location.convert(location.getLatitude(), Location.FORMAT_SECONDS),
+                                    Location.convert(location.getLongitude(), Location.FORMAT_SECONDS));
+
+                            intent.putExtra(MyBroadcastReceiver.EXTRA_LOCATION, ls);
+
+                            sendBroadcast(intent);
+                        }
+                    }
+                };
+                float minDistanceM = 10.0f;
+
+                if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, minDistanceM, locationListener);
+                } else  if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+
+                    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 500, minDistanceM, locationListener);
+                }
+            }
+        }
 
         //stopSelf();
 

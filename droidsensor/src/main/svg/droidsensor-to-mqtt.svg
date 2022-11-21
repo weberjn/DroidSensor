@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg:svg
+   width="480"
+   height="720"
+   viewBox="0 0 127 190.50001"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="droidsensor-to-mqtt.svg"
+   inkscape:export-filename="C:\java\gitProjects\android\DroidSensor\droidsensor\src\main\svg\droidsensor-to-mqtt.png"
+   inkscape:export-xdpi="1000.0963"
+   inkscape:export-ydpi="1000.0963"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <svg:title
+     id="title3727">generic_edge_android_phone_device</svg:title>
+  <svg:defs
+     id="defs2">
+    <svg:linearGradient
+       inkscape:collect="always"
+       id="linearGradient3719">
+      <svg:stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="0"
+         id="stop3715" />
+      <svg:stop
+         id="stop3725"
+         offset="0.08058813"
+         style="stop-color:#f3f3f3;stop-opacity:1;" />
+      <svg:stop
+         id="stop3723"
+         offset="0.90476203"
+         style="stop-color:#ffffff;stop-opacity:1" />
+      <svg:stop
+         style="stop-color:#f2f2f2;stop-opacity:0;"
+         offset="1"
+         id="stop3717" />
+    </svg:linearGradient>
+    <svg:linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3719"
+       id="linearGradient3721"
+       x1="109.84773"
+       y1="45.198696"
+       x2="129.29164"
+       y2="45.131882"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(3.0000848,-1.8503884e-8,0,2.4480004,-250.35525,38.973581)" />
+  </svg:defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="214.15234"
+     inkscape:cy="194.95944"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1146"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:pagecheckerboard="false" />
+  <svg:metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>generic_edge_android_phone_device</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </svg:metadata>
+  <svg:g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-106.49998)">
+    <svg:rect
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.30625"
+       id="rect14637"
+       width="115.87381"
+       height="145.80067"
+       x="2.5265918"
+       y="115.98289"
+       inkscape:export-filename="C:\java\gitProjects\android\DroidSensor\droidsensor\src\main\res\svg\rect14637.png"
+       inkscape:export-xdpi="1000.1"
+       inkscape:export-ydpi="1000.1" />
+    <svg:g
+       id="g2509"
+       transform="matrix(0.68187709,-0.03414959,0.03204572,0.72664398,-10.50776,18.280903)"
+       inkscape:export-filename="C:\java\gitProjects\android\DroidSensor\droidsensor\src\main\res\svg\g2509.png"
+       inkscape:export-xdpi="1000.0963"
+       inkscape:export-ydpi="1000.0963">
+      <svg:rect
+         id="rect10"
+         width="53.722698"
+         height="79.821655"
+         x="80.801033"
+         y="113.06232"
+         style="stroke-width:0.717027"
+         ry="5.8884835"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         transform="matrix(0.88668401,0.46237589,-0.19160627,0.98147187,0,0)" />
+      <svg:rect
+         style="fill:url(#linearGradient3721);fill-opacity:1;stroke:none;stroke-width:0.756776"
+         id="rect20"
+         width="51.3172"
+         height="66.572571"
+         x="82.003769"
+         y="118.6237"
+         ry="2.3715427"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         transform="matrix(0.88668401,0.46237589,-0.19160627,0.98147187,0,0)" />
+      <svg:ellipse
+         style="fill:#f2f2f2;stroke:none;stroke-width:0.717027"
+         id="path22"
+         cx="107.66239"
+         cy="188.71298"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         transform="matrix(0.88668401,0.46237589,-0.19160627,0.98147187,0,0)"
+         rx="3.5080116"
+         ry="2.862457" />
+      <svg:rect
+         style="fill:#f2f2f2;stroke:none;stroke-width:0.717027"
+         id="rect24"
+         width="11.906588"
+         height="1.3300986"
+         x="101.7091"
+         y="115.3224"
+         ry="0.66504931"
+         inkscape:export-xdpi="90"
+         inkscape:export-ydpi="90"
+         transform="matrix(0.88668401,0.46237589,-0.19160627,0.98147187,0,0)" />
+    </svg:g>
+    <svg:g
+       id="g16099"
+       transform="translate(90.224663,-48.857154)">
+      <svg:ellipse
+         fill="#ffffff"
+         cx="-68.388245"
+         cy="204.08966"
+         rx="15.987559"
+         ry="22.987507"
+         id="ellipse800"
+         style="stroke-width:0.0364044" />
+      <svg:path
+         d="m -74.91051,216.57483 c 2.148827,-5.32695 4.376538,-10.59493 6.646289,-15.82051 0.592267,-1.36354 1.213297,-2.70121 1.813377,-4.05783 0.553623,-1.25162 1.120786,-2.48091 1.776961,-3.63139 0.118808,-0.20835 0.210647,-0.42657 0.414278,-0.45751 0.137337,-0.0225 0.310191,-0.009 0.428264,0.0999 0.110476,0.10175 0.177174,0.29119 0.224482,0.46141 0.08273,0.29785 -0.02038,0.51166 -0.115624,0.77246 -0.479559,1.31313 -1.046108,2.54302 -1.632563,3.76439 -0.635663,1.32386 -1.250557,2.66716 -1.893846,3.9837 -0.657433,1.34549 -1.32711,2.67913 -1.989599,4.0197 -1.298425,2.62741 -2.613782,5.23855 -3.945849,7.83218 -0.33555,0.6533 -0.670817,1.30697 -1.008537,1.95804 -0.150839,0.29075 -0.30192,0.58125 -0.452946,0.87184 -0.05147,0.0991 -0.103314,0.19774 -0.155031,0.29655 -0.0066,0.0126 -0.09511,-0.0795 -0.109656,-0.0929 z"
+         id="path806"
+         style="stroke-width:0.0364044" />
+      <svg:ellipse
+         fill="#c4b291"
+         cx="-68.388245"
+         cy="202.81155"
+         id="circle808"
+         rx="1.1790614"
+         ry="1.6665078"
+         style="fill:#ff0000;stroke-width:0.0364044" />
+      <svg:path
+         d="m -68.308562,179.94593 c -9.462593,0 -17.133548,10.80865 -17.133548,24.14175 0,13.3331 7.670955,24.1418 17.133548,24.1418 9.462597,0 17.133553,-10.80865 17.133553,-24.14175 0,-13.3331 -7.670928,-24.1418 -17.133553,-24.1418 z m 0,45.55109 c -8.509301,0 -15.407418,-9.71972 -15.407418,-21.70957 0,-11.98986 6.898155,-21.70961 15.407418,-21.70961 8.509267,0 15.407418,9.71971 15.407418,21.70957 0,11.98985 -6.898118,21.70961 -15.407418,21.70961 z"
+         id="path810"
+         style="stroke-width:0.0364044" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-68.388245"
+         y1="184.23608"
+         x2="-68.388245"
+         y2="187.65935"
+         id="line812" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-61.81712"
+         y1="186.7247"
+         x2="-63.028095"
+         y2="189.68936"
+         id="line814" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-57.006718"
+         y1="193.52382"
+         x2="-59.104229"
+         y2="195.23543"
+         id="line816" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-55.246014"
+         y1="202.81155"
+         x2="-57.66798"
+         y2="202.81155"
+         id="line818"
+         style="fill:#ff0000" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-57.006718"
+         y1="212.09929"
+         x2="-59.104229"
+         y2="210.38765"
+         id="line820"
+         style="fill:#ff0000" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-79.769737"
+         y1="212.09929"
+         x2="-77.672249"
+         y2="210.38765"
+         id="line822" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-81.530441"
+         y1="202.81155"
+         x2="-79.108467"
+         y2="202.81155"
+         id="line824" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-79.769737"
+         y1="193.52382"
+         x2="-77.672249"
+         y2="195.23543"
+         id="line826" />
+      <svg:line
+         fill="none"
+         stroke="#000000"
+         stroke-width="0.407439"
+         stroke-miterlimit="10"
+         x1="-74.959351"
+         y1="186.7247"
+         x2="-73.74836"
+         y2="189.68936"
+         id="line828" />
+      <svg:g
+         id="g860"
+         transform="matrix(0.030621,0,0,0.04328029,-107.50343,158.981)"
+         style="fill:#ff0000">
+        <svg:path
+           d="m 998.985,1160.464 h -0.181 l -10.192,5.502 -1.533,-6.044 12.809,-6.855 h 6.765 v 58.63 h -7.667 v -51.233 z"
+           id="path856"
+           style="fill:#ff0000" />
+        <svg:path
+           d="m 1066.993,1181.751 c 0,19.934 -7.397,30.938 -20.386,30.938 -11.455,0 -19.212,-10.734 -19.392,-30.126 0,-19.664 8.478,-30.488 20.385,-30.488 12.357,0 19.393,11.005 19.393,29.676 z m -31.841,0.902 c 0,15.244 4.691,23.903 11.907,23.903 8.118,0 11.997,-9.471 11.997,-24.444 0,-14.432 -3.699,-23.903 -11.907,-23.903 -6.945,0 -11.997,8.479 -11.997,24.444 z"
+           id="path858"
+           style="fill:#ff0000" />
+      </svg:g>
+      <svg:g
+         id="g866"
+         transform="matrix(0.030621,0,0,0.04328029,-107.50343,158.981)"
+         style="fill:#ff0000">
+        <svg:path
+           d="m 993.75,888.285 v -4.871 l 6.223,-6.043 c 14.973,-14.252 21.738,-21.828 21.828,-30.667 0,-5.954 -2.886,-11.455 -11.636,-11.455 -5.322,0 -9.741,2.705 -12.447,4.961 l -2.525,-5.593 c 4.059,-3.428 9.831,-5.953 16.597,-5.953 12.628,0 17.95,8.659 17.95,17.047 0,10.824 -7.847,19.573 -20.205,31.48 l -4.691,4.33 v 0.18 h 26.339 v 6.584 z"
+           id="path862"
+           style="fill:#ff0000" />
+        <svg:path
+           d="m 1078.986,858.339 c 0,19.934 -7.397,30.938 -20.386,30.938 -11.455,0 -19.212,-10.734 -19.392,-30.127 0,-19.663 8.478,-30.487 20.385,-30.487 12.357,0 19.393,11.004 19.393,29.676 z m -31.842,0.902 c 0,15.244 4.691,23.903 11.907,23.903 8.118,0 11.997,-9.471 11.997,-24.444 0,-14.432 -3.699,-23.903 -11.907,-23.903 -6.945,-10e-4 -11.997,8.478 -11.997,24.444 z"
+           id="path864"
+           style="fill:#ff0000" />
+      </svg:g>
+      <svg:g
+         id="g872"
+         transform="matrix(0.030621,0,0,0.04328029,-107.50343,158.981)"
+         style="fill:#ff0000">
+        <svg:path
+           d="m 1236.89,726.258 c 2.255,1.443 7.487,3.698 12.989,3.698 10.192,0 13.35,-6.494 13.26,-11.365 -0.091,-8.208 -7.487,-11.726 -15.154,-11.726 h -4.42 v -5.953 h 4.42 c 5.773,0 13.079,-2.976 13.079,-9.922 0,-4.69 -2.977,-8.84 -10.283,-8.84 -4.691,0 -9.201,2.075 -11.727,3.879 l -2.075,-5.773 c 3.067,-2.255 9.02,-4.51 15.334,-4.51 11.546,0 16.777,6.855 16.777,13.981 0,6.043 -3.608,11.184 -10.824,13.8 v 0.18 c 7.216,1.443 13.079,6.855 13.079,15.063 0,9.381 -7.306,17.589 -21.378,17.589 -6.584,0 -12.357,-2.075 -15.244,-3.969 z"
+           id="path868"
+           style="fill:#ff0000" />
+        <svg:path
+           d="m 1320.232,705.422 c 0,19.934 -7.397,30.938 -20.386,30.938 -11.455,0 -19.212,-10.734 -19.392,-30.127 0,-19.663 8.478,-30.487 20.385,-30.487 12.357,0 19.393,11.005 19.393,29.676 z m -31.841,0.902 c 0,15.244 4.691,23.903 11.907,23.903 8.118,0 11.997,-9.471 11.997,-24.444 0,-14.432 -3.699,-23.903 -11.907,-23.903 -6.945,0 -11.997,8.479 -11.997,24.444 z"
+           id="path870"
+           style="fill:#ff0000" />
+      </svg:g>
+      <svg:g
+         id="g878"
+         transform="matrix(0.030621,0,0,0.04328029,-107.50343,158.981)"
+         style="fill:#ff0000">
+        <svg:path
+           d="M 1504.793,883.925 V 867.96 h -27.24 v -5.232 l 26.158,-37.433 h 8.57 v 36.44 h 8.208 v 6.224 h -8.208 v 15.965 z m 0,-22.189 v -19.573 c 0,-3.067 0.091,-6.134 0.271,-9.2 h -0.271 c -1.804,3.427 -3.247,5.953 -4.87,8.659 l -14.343,19.934 v 0.18 z"
+           id="path874"
+           style="fill:#ff0000" />
+        <svg:path
+           d="m 1565.495,853.979 c 0,19.934 -7.398,30.939 -20.386,30.939 -11.455,0 -19.211,-10.734 -19.392,-30.127 0,-19.663 8.478,-30.487 20.385,-30.487 12.358,-10e-4 19.393,11.004 19.393,29.675 z m -31.841,0.902 c 0,15.244 4.69,23.903 11.906,23.903 8.118,0 11.997,-9.471 11.997,-24.444 0,-14.432 -3.698,-23.903 -11.906,-23.903 -6.945,0 -11.997,8.479 -11.997,24.444 z"
+           id="path876"
+           style="fill:#ff0000" />
+      </svg:g>
+      <svg:g
+         id="g884"
+         transform="matrix(0.030621,0,0,0.04328029,-107.50343,158.981)"
+         style="fill:#ff0000">
+        <svg:path
+           d="m 1513.875,1159.527 h -22.369 l -2.255,15.063 c 1.352,-0.18 2.615,-0.36 4.781,-0.36 4.51,0 9.02,0.992 12.627,3.157 4.601,2.616 8.39,7.667 8.39,15.063 0,11.455 -9.11,20.025 -21.828,20.025 -6.404,0 -11.817,-1.804 -14.614,-3.608 l 1.985,-6.044 c 2.435,1.443 7.216,3.248 12.537,3.248 7.487,0 13.891,-4.871 13.891,-12.718 -0.091,-7.576 -5.141,-12.989 -16.868,-12.989 -3.336,0 -5.953,0.361 -8.117,0.631 l 3.787,-28.142 h 28.052 z"
+           id="path880"
+           style="fill:#ff0000" />
+        <svg:path
+           d="m 1564.115,1181.536 c 0,19.934 -7.398,30.939 -20.386,30.939 -11.455,0 -19.211,-10.734 -19.392,-30.127 0,-19.663 8.478,-30.487 20.385,-30.487 12.357,0 19.393,11.004 19.393,29.675 z m -31.841,0.902 c 0,15.244 4.69,23.903 11.906,23.903 8.118,0 11.997,-9.471 11.997,-24.444 0,-14.432 -3.698,-23.903 -11.906,-23.903 -6.945,0 -11.997,8.479 -11.997,24.444 z"
+           id="path882"
+           style="fill:#ff0000" />
+      </svg:g>
+    </svg:g>
+    <svg:text
+       xml:space="preserve"
+       style="font-size:16.9333px;line-height:1.25;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';stroke-width:0.264583"
+       x="67.084656"
+       y="180.8009"
+       id="text9167"><svg:tspan
+         sodipodi:role="line"
+         id="tspan9165"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9333px;font-family:'Ink Free';-inkscape-font-specification:'Ink Free';stroke-width:0.264583"
+         x="67.084656"
+         y="180.8009">MQTT</svg:tspan></svg:text>
+    <svg:text
+       xml:space="preserve"
+       style="font-size:35.3295px;line-height:1.25;font-family:'Comic Sans MS';-inkscape-font-specification:'Comic Sans MS';stroke-width:0.184008"
+       x="8.7740288"
+       y="319.6539"
+       id="text18957"
+       transform="scale(1.7519437,0.57079459)"><svg:tspan
+         sodipodi:role="line"
+         id="tspan18955"
+         style="fill:#ff0000;stroke-width:0.184008"
+         x="8.7740288"
+         y="319.6539">⮩</svg:tspan></svg:text>
+  </svg:g>
+  <script />
+</svg:svg>
